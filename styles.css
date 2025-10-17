@@ -12,9 +12,11 @@ body {
     background-image: url('./public/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-variant-numeric: lining-nums;
+    min-width: 1280px;
 }
 
 * {
