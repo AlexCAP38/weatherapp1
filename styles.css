@@ -1,0 +1,30 @@
+@import url('./styles/variables.css');
+@import url('./styles/fonts.css');
+@import url('./styles/normalize.css');
+@import url('./styles/blocks/header.css');
+@import url('./styles/blocks/content.css');
+@import url('./styles/blocks/aside.css');
+@import url('./styles/blocks/footer.css');
+@import url('./styles/blocks/searchBar.css');
+@import url('./styles/blocks/logo.css');
+
+body {
+    background-image: url('./public/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-variant-numeric: lining-nums;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    width: 1120px;
+    margin: 32px auto;
+    background-color: rgba(112, 112, 112, 0.1);
+    backdrop-filter: blur(50px);
+    border-radius: var(--default-border-radius);
+}

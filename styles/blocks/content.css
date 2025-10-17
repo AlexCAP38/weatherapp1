@@ -1,0 +1,88 @@
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 32px;
+    color: var(--text-neutral-100);
+}
+
+.weather-city {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 8px;
+
+    .weather-city__information {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        .weather-city__information-city {
+            margin: 2px 0 0 0;
+            font-size: 24px;
+        }
+
+        .weather-city__temperature-data {
+            margin: 3px 0 0 0;
+        }
+
+        .weather-city__temperature-time {
+            margin: 1px 0 0 0;
+        }
+    }
+
+    .weather-city__temperature {
+        width: 100%;
+        text-align: center;
+        font-size: 112px;
+        font-weight: 700;
+        margin: 3px 0 0 0;
+
+    }
+
+    .weather-city__state {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        .weather-city__state-icon {
+            display: flex;
+
+            img {
+                margin-right: 8px;
+            }
+
+            span {
+                margin-top: 1px
+            }
+        }
+
+        .weather-city__state-fill {
+            margin: 1px 0 0 0;
+        }
+    }
+}
+
+.weather-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    width: 506px;
+
+    .weather-list__card {
+        width: 158px;
+        height: 196px;
+        border-radius: var(--default-border-radius);
+        background-color: var(--background-neutral-100);
+    }
+}

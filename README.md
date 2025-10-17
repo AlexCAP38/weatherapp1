@@ -1,5 +1,5 @@
 # WeatherApp
 
-Nik: AlexCAP
+AlexCAP
 
-Name: Alexey
+Alexey

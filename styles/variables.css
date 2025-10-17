@@ -1,0 +1,8 @@
+:root {
+    --default-border-radius: 8px;
+    --background-neutral-100: rgba(245, 244, 244, 0.4);
+    --background-neutral-200: rgba(218, 218, 218, 1);
+    --text-neutral-100: rgba(245, 244, 244, 1);
+    --text-neutral-600: rgba(112, 112, 112, 1);
+    --text-neutral-900: rgba(32, 32, 32, 1);
+}
