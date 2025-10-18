@@ -16,28 +16,26 @@ const sunsetDescription = document.querySelector('#sunset-description');
 const speed = document.querySelector('#speed');
 const direction = document.querySelector('#direction');
 
-
-searchBar && searchBar.addEventListener('input', callback);
-function callback(event) {
+searchBar && searchBar.addEventListener('input', (event) => {
     console.log(event.target.value);
-}
+});
 
 humidity.textContent = `${weatherToday.humidity} %`;
 humidityBar.value = weatherToday.humidity;
 
 barometer.textContent = weatherToday.barometer;
 barometerBar.value = weatherToday.barometer;
-barometerDescription.textContent = 'нормально';
+barometerDescription.textContent = weatherToday.barometerDescription;
 
-visibility.textContent = weatherToday.visibility;
+visibility.textContent = `${weatherToday.visibility} км`;
 visibilityBar.value = weatherToday.visibility;
-visibilityDescription.textContent = 'нормально';
+visibilityDescription.textContent = weatherToday.visibilityDescription;
 
 sunrise.textContent = weatherToday.sunrise;
-sunriseDescription.textContent = `Прошло: 02:47`;
+sunriseDescription.textContent = weatherToday.sunriseDescription;
 
 sunset.textContent = weatherToday.sunset;
-sunsetDescription.textContent = `Осталось: 05:08`;
+sunsetDescription.textContent = weatherToday.sunsetDescription;
 
 speed.textContent = `${weatherToday.speed} м/с`;
 direction.textContent = weatherToday.direction;

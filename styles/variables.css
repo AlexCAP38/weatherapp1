@@ -1,9 +1,10 @@
 :root {
     --default-border-radius: 8px;
     --background-neutral-100: rgba(245, 244, 244, 0.4);
-    --background-neutral-100-1: rgba(245, 244, 244, 1);
+    --background-neutral-100-alpha-1: rgba(245, 244, 244, 1);
     --background-neutral-200: rgba(218, 218, 218, 1);
-    --background-neutral-200-4: rgba(218, 218, 218, 0.4);
+    --background-neutral-200-alpha-04: rgba(218, 218, 218, 0.4);
+    --background-range-thumb: rgba(139, 139, 139, 0.1);
     --text-neutral-100: rgba(245, 244, 244, 1);
     --text-neutral-600: rgba(112, 112, 112, 1);
     --text-neutral-800: rgba(57, 57, 57, 1);

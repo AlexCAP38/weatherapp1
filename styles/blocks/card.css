@@ -3,7 +3,7 @@
     height: 196px;
     border-radius: var(--default-border-radius);
     background-color: var(--background-neutral-100);
-    padding: 17px 16px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -17,13 +17,15 @@
         height: 118px;
 
         .card__title {
-            margin: 0;
             font-size: 16px;
+            line-height: 22px;
+            font-weight: 700;
             text-align: center;
         }
 
         .card__value {
             font-size: 32px;
+            line-height: 36px;
         }
     }
 
@@ -35,20 +37,21 @@
         .card__bar {
             -webkit-appearance: none;
             appearance: none;
+            overflow: hidden;
             height: 8px;
-            background-color: var(--background-neutral-200-4);
+            background-color: var(--background-neutral-200-alpha-04);
             border-radius: var(--default-border-radius);
         }
 
         .card__bar::-webkit-slider-runnable-track {
             height: 8px;
-            background-color: var(--background-neutral-200-4);
+            background-color: var(--background-neutral-200-alpha-04);
             border-radius: var(--default-border-radius);
         }
 
         .card__bar::-moz-range-track {
             height: 8px;
-            background-color: var(--background-neutral-200-4);
+            background-color: var(--background-neutral-200-alpha-04);
             border-radius: var(--default-border-radius);
         }
 
@@ -56,17 +59,17 @@
             -webkit-appearance: none;
             width: 8px;
             height: 8px;
-            outline: 4px solid var(--background-neutral-200-4);
+            outline: 4px solid var(--background-range-thumb);
             border-radius: 50%;
-            background: var(--background-neutral-100-1);
+            background: var(--text-neutral-100);
         }
 
         .card__bar::-moz-range-thumb {
             width: 8px;
             height: 8px;
-            outline: 4px solid var(--background-neutral-200-4);
+            outline: 4px solid var(--background-range-thumb);
             border-radius: 50%;
-            background: var(--background-neutral-100-1);
+            background: var(--text-neutral-100);
         }
 
         .card__range-container {
@@ -75,16 +78,17 @@
 
             .card__range-description {
                 font-size: 12px;
+                line-height: 16px;
                 color: var(--text-neutral-800);
             }
         }
     }
 
-    .card__bar-container_center {
+    .card__bar-container--center {
         justify-content: center !important;
     }
 
-    .card__bar_gradient {
+    .card__bar--gradient {
         background: radial-gradient(50% 9453.13% at 50% 50%,
                 rgba(84, 84, 84, 0.4) 0%,
                 rgba(138, 138, 138, 0.4) 45.12%,
