@@ -6,7 +6,7 @@
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
     color: var(--text-neutral-900);
 
     .card__values-container {
@@ -14,18 +14,18 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 118px;
+        height: 116px;
 
         .card__title {
             font-size: 16px;
-            line-height: 22px;
+            line-height: 21px;
             font-weight: 700;
             text-align: center;
         }
 
         .card__value {
             font-size: 32px;
-            line-height: 36px;
+            line-height: 32px;
         }
     }
 
@@ -59,7 +59,7 @@
             -webkit-appearance: none;
             width: 8px;
             height: 8px;
-            outline: 4px solid var(--background-range-thumb);
+            outline: 2px solid var(--background-range-thumb);
             border-radius: 50%;
             background: var(--text-neutral-100);
         }
@@ -67,7 +67,7 @@
         .card__bar::-moz-range-thumb {
             width: 8px;
             height: 8px;
-            outline: 4px solid var(--background-range-thumb);
+            outline: 2px solid var(--background-range-thumb);
             border-radius: 50%;
             background: var(--text-neutral-100);
         }

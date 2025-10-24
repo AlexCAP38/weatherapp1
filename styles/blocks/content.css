@@ -23,16 +23,9 @@
         gap: 8px;
 
         .weather-city__information-city {
-            margin: 2px 0 0 0;
+            font-weight: 700;
             font-size: 24px;
-        }
-
-        .weather-city__temperature-data {
-            margin: 3px 0 0 0;
-        }
-
-        .weather-city__temperature-time {
-            margin: 1px 0 0 0;
+            line-height: 32px;
         }
     }
 
@@ -57,17 +50,14 @@
             flex-direction: row;
             align-items: center;
 
-            img {
-                margin-right: 8px;
-            }
-
             span {
-                margin-top: 1px
+                margin-left: 8px;
+                line-height: 24px;
             }
         }
 
         .weather-city__state-fill {
-            margin: 1px 0 0 0;
+            line-height: 24px;
         }
     }
 }

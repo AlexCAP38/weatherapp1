@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./images/weatherIcons/fewCloudsDay.svg" type="image/svg">
     <title>Weather App</title>
 </head>
 
 <body>
     <div class="main-wrapper">
-        <h1 hidden>Приложение Weather App для отображение погоды</h1>
+        <h1 class="visually-hidden">Приложение Weather App для отображение погоды</h1>
         <header class="header">
             <a href="#" class="logo">
                 <img src="./images/logo.svg" alt="Логотип приложения" width="192" height="48">
@@ -36,96 +36,28 @@
                     <span class="weather-city__state-fill">Ощущается как -11°</span>
                 </div>
             </article>
-            <ul class="weather-list">
-                <li class="card" aria-label="Humidity">
-                    <div class="card__values-container">
-                        <h3 class="card__title">Влажность</h3>
-                        <img class="card__icon" src="./images/weatherStateIcon/humidity.svg"
-                            alt="Иконка состояния погоды" width="32" height="32">
-                        <span class="card__value" id="humidity-value"></span>
-                    </div>
-                    <div class="card__bar-container">
-                        <input type="range" class="card__bar" id="humidity-bar" disabled min="0" max="100" />
-                        <div class="card__range-container">
-                            <span class="card__range-description">0%</span>
-                            <span class="card__range-description">100%</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card" aria-label="Barometer">
-                    <div class="card__values-container">
-                        <h3 class="card__title">Давление</h3>
-                        <img class="card__icon" src="./images/weatherStateIcon/barometr.svg"
-                            alt="Иконка состояния погоды" width="32" height="32">
-                        <span class="card__value" id="barometer"></span>
-                    </div>
-                    <div class="card__bar-container">
-                        <input type="range" class="card__bar card__bar--gradient" id="barometer-bar" disabled min="653"
-                            max="814" />
-                        <div class="card__range-container card__bar-container--center">
-                            <span class="card__range-description" id="barometer-description"></span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card" aria-label="Visibility">
-                    <div class="card__values-container">
-                        <h3 class="card__title">Видимость</h3>
-                        <img class="card__icon" src="./images/weatherStateIcon/visibility.svg"
-                            alt="Иконка состояния погоды" width="32" height="32">
-                        <span class="card__value" id="visibility"></span>
-                    </div>
-                    <div class="card__bar-container">
-                        <input type="range" class="card__bar" id="visibility-bar" disabled min="0" max="100" />
-                        <div class="card__range-container card__bar-container--center">
-                            <span class="card__range-description" id="visibility-description"></span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card" aria-label="Sunrise">
-                    <div class="card__values-container">
-                        <h3 class="card__title">Рассвет</h3>
-                        <img class="card__icon" src="./images/weatherStateIcon/sunrise.svg"
-                            alt="Иконка состояния погоды" width="32" height="32">
-                        <span class="card__value" id="sunrise"></span>
-                    </div>
-                    <div class="card__bar-container">
-                        <div class="card__range-container card__bar-container--center">
-                            <span class="card__range-description" id="sunrise-description"></span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card" aria-label="Sunset">
-                    <div class="card__values-container">
-                        <h3 class="card__title">Закат</h3>
-                        <img class="card__icon" src="./images/weatherStateIcon/sunset.svg"
-                            alt="Иконка состояния погоды" width="32" height="32">
-                        <span class="card__value" id="sunset"></span>
-                    </div>
-                    <div class="card__bar-container">
-                        <div class="card__range-container card__bar-container--center">
-                            <span class="card__range-description" id="sunset-description"></span>
-                        </div>
-                    </div>
-                </li>
-                <li class="card" aria-label="Direction">
-                    <div class="card__values-container">
-                        <h3 class="card__title">Сила ветра</h3>
-                        <img class="card__icon" src="./images/weatherStateIcon/direction.svg"
-                            alt="Иконка состояния погоды" width="32" height="32">
-                        <span class="card__value" id="speed"></span>
-                    </div>
-                    <div class="card__bar-container">
-                        <div class="card__range-container card__bar-container--center">
-                            <span class="card__range-description" id="direction"></span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <ul class="weather-list" id="weather-list"></ul>
         </main>
         <aside class="aside"></aside>
         <footer class="footer"></footer>
     </div>
-    <script src="./script.js" type="module"></script>
+    <template id="template-card">
+        <li class="card">
+            <div class="card__values-container">
+                <h3 class="card__title"></h3>
+                <img class="card__icon" src="" alt="Иконка состояния погоды" width="32" height="32">
+                <span class="card__value"></span>
+            </div>
+            <div class="card__bar-container">
+                <input type="range" class="card__bar" id="card__bar" disabled aria-hidden="true"/>
+                <div class="card__range-container">
+                    <span class="card__range-description"></span>
+                    <span class="card__range-description"></span>
+                </div>
+            </div>
+        </li>
+    </template>
+    <script src="./js/main.js" type="module"></script>
 </body>
 
 </html>
