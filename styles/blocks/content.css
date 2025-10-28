@@ -6,7 +6,7 @@
     color: var(--text-neutral-100);
 }
 
-.weather-city {
+.weather-current {
     display: flex;
     flex-direction: column;
     flex: auto;
@@ -15,21 +15,21 @@
     font-size: 20px;
     padding: 8px;
 
-    .weather-city__information {
+    .weather-current__container {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 8px;
 
-        .weather-city__information-city {
+        .weather-current__title-city {
             font-weight: 700;
             font-size: 24px;
             line-height: 32px;
         }
     }
 
-    .weather-city__temperature {
+    .weather-current__temperature {
         width: 100%;
         text-align: center;
         font-size: 112px;
@@ -38,14 +38,14 @@
 
     }
 
-    .weather-city__state {
+    .weather-current__state {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 8px;
 
-        .weather-city__state-icon {
+        .weather-current__content {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -56,13 +56,13 @@
             }
         }
 
-        .weather-city__state-fill {
+        .weather-current__fill {
             line-height: 24px;
         }
     }
 }
 
-.weather-list {
+.weather-indications {
     list-style: none;
     display: flex;
     flex-wrap: wrap;

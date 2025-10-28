@@ -35,41 +35,38 @@
         gap: 8px;
 
         .card__bar {
-            -webkit-appearance: none;
-            appearance: none;
-            overflow: hidden;
+            --hole-x: 50%;
+            --background-tack: var(--background-neutral-200-alpha-04);
+            --gradient: radial-gradient(50% 9453.13% at 50% 50%,
+                rgba(84, 84, 84, 0.4) 0%,
+                rgba(138, 138, 138, 0.4) 45.12%,
+                #DADADA 100%,
+                rgba(218, 218, 218, 0.4) 100%);
+            position: relative;
+            width: 100%;
             height: 8px;
-            background-color: var(--background-neutral-200-alpha-04);
-            border-radius: var(--default-border-radius);
         }
 
-        .card__bar::-webkit-slider-runnable-track {
-            height: 8px;
-            background-color: var(--background-neutral-200-alpha-04);
+        .card__bar::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--background-tack);
             border-radius: var(--default-border-radius);
+            mask-image: radial-gradient(circle 60px at var(--hole-x) 50%, transparent 12%, black 12%);
+            mask-repeat: no-repeat;
+            z-index: 2;
         }
 
-        .card__bar::-moz-range-track {
-            height: 8px;
-            background-color: var(--background-neutral-200-alpha-04);
-            border-radius: var(--default-border-radius);
-        }
-
-        .card__bar::-webkit-slider-thumb {
-            -webkit-appearance: none;
+        .card__thumb {
+            position: absolute;
             width: 8px;
             height: 8px;
-            outline: 2px solid var(--background-range-thumb);
             border-radius: 50%;
-            background: var(--text-neutral-100);
-        }
-
-        .card__bar::-moz-range-thumb {
-            width: 8px;
-            height: 8px;
-            outline: 2px solid var(--background-range-thumb);
-            border-radius: 50%;
-            background: var(--text-neutral-100);
+            background-color: #DADADA;
+            left: var(--hole-x);
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .card__range-container {
@@ -86,13 +83,5 @@
 
     .card__bar-container--center {
         justify-content: center !important;
-    }
-
-    .card__bar--gradient {
-        background: radial-gradient(50% 9453.13% at 50% 50%,
-                rgba(84, 84, 84, 0.4) 0%,
-                rgba(138, 138, 138, 0.4) 45.12%,
-                #DADADA 100%,
-                rgba(218, 218, 218, 0.4) 100%);
     }
 }

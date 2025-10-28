@@ -10,4 +10,56 @@ export const weatherToday = {
     sunsetDescription: 'Осталось: 05:08',
     direction: 'Северо-западный',
     speed: 2
-}
+};
+
+export const detailToday = [
+    {
+        time: '12:00',
+        state: 'Cloudy',
+        temperature: -7
+    },
+    {
+        time: '15:00',
+        state: 'Cloudy',
+        temperature: -5
+    },
+    {
+        time: '18:00',
+        state: 'Cloudy',
+        temperature: -7
+    },
+    {
+        time: '21:00',
+        state: 'Cloudy',
+        temperature: -9
+    },
+
+    {
+        time: '00:00',
+        state: 'Cloudy',
+        temperature: -11
+    }
+];
+
+export const otherDay = [
+    {
+        date: 'Вс, 07 янв.',
+        state: 'Sunny',
+        temperature: [-17, -11]
+    },
+    {
+        date: 'Пн, 08 янв.',
+        state: 'Sunny',
+        temperature: [-16, -8]
+    },
+    {
+        date: 'Вт, 09 янв.',
+        state: 'Sunny',
+        temperature: [-8, -2]
+    },
+    {
+        date: 'Ср, 10 янв.',
+        state: 'Sunny',
+        temperature: [-17, -11]
+    },
+];

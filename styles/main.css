@@ -3,7 +3,7 @@
 @import url('./normalize.css');
 @import url('./blocks/header.css');
 @import url('./blocks/content.css');
-@import url('./blocks/aside.css');
+@import url('./blocks/weatherGroup.css');
 @import url('./blocks/footer.css');
 @import url('./blocks/searchBar.css');
 @import url('./blocks/logo.css');
@@ -32,7 +32,7 @@ body {
     width: 1120px;
     margin: 32px auto;
     background-color: rgba(112, 112, 112, 0.1);
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(50px);
     border-radius: var(--default-border-radius);
 }
 

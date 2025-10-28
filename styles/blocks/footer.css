@@ -1,3 +1,18 @@
 .footer {
     height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__link {
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--text-neutral-100);
+
+    a {
+        color: inherit;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+    }
 }
