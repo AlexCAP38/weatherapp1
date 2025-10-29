@@ -74,7 +74,7 @@
         .weather-group__btn--disable:hover {
             background-color: var(--background-neutral-100);
             opacity: 0.5;
-            cursor: default;
+       cursor: not-allowed;
         }
 
         .weather-group__btn--rotate {
@@ -107,7 +107,7 @@
                 padding: 16px;
                 gap: 16px;
                 font-variant-numeric: lining-nums;
-                line-height: 21px;
+                line-height: 20px;
                 letter-spacing: 0.05px;
                 text-wrap: nowrap;
             }

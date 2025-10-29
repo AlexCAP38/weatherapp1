@@ -33,9 +33,8 @@
         width: 100%;
         text-align: center;
         font-size: 112px;
+        line-height: 112px;
         font-weight: 700;
-        margin: 3px 0 0 1px;
-
     }
 
     .weather-current__state {

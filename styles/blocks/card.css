@@ -18,7 +18,7 @@
 
         .card__title {
             font-size: 16px;
-            line-height: 21px;
+            line-height: 20px;
             font-weight: 700;
             text-align: center;
         }
@@ -38,10 +38,10 @@
             --hole-x: 50%;
             --background-tack: var(--background-neutral-200-alpha-04);
             --gradient: radial-gradient(50% 9453.13% at 50% 50%,
-                rgba(84, 84, 84, 0.4) 0%,
-                rgba(138, 138, 138, 0.4) 45.12%,
-                #DADADA 100%,
-                rgba(218, 218, 218, 0.4) 100%);
+                    rgba(84, 84, 84, 0.4) 0%,
+                    rgba(138, 138, 138, 0.4) 45.12%,
+                    #DADADA 100%,
+                    rgba(218, 218, 218, 0.4) 100%);
             position: relative;
             width: 100%;
             height: 8px;
@@ -53,6 +53,13 @@
             inset: 0;
             background: var(--background-tack);
             border-radius: var(--default-border-radius);
+
+            -webkit-mask-image: radial-gradient(circle 60px at var(--hole-x) 50%, transparent 12%, black 12%);
+            -webkit-mask-repeat: no-repeat;
+
+            -moz-mask-image: radial-gradient(circle 60px at var(--hole-x) 50%, transparent 12%, black 12%);
+            -moz-mask-repeat: no-repeat;
+
             mask-image: radial-gradient(circle 60px at var(--hole-x) 50%, transparent 12%, black 12%);
             mask-repeat: no-repeat;
             z-index: 2;
@@ -81,7 +88,7 @@
         }
     }
 
-    .card__bar-container--center {
-        justify-content: center !important;
+    .card__bar-container .card__bar-container--center {
+        justify-content: center;
     }
 }

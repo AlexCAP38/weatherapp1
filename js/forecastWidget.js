@@ -1,4 +1,4 @@
-export class WidgetOther {
+export class ForecastWidget {
 
     #templateCard;
     #data;

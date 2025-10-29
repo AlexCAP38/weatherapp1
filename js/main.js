@@ -4,11 +4,11 @@ import {
     detailToday,
     otherDay
 } from './mockData.js';
-import {Widget} from './widget.js';
-import {WidgetOther} from './widgetOther.js';
+import {WeatherStatWidget} from './weatherStatWidget.js';
+import {ForecastWidget} from './forecastWidget.js';
 
-const widgetCard = new Widget(weatherToday);
-const shortCardDetail = new WidgetOther({detailToday, otherDay});
+const widgetCard = new WeatherStatWidget(weatherToday);
+const shortCardDetail = new ForecastWidget({detailToday, otherDay});
 
 inputSearchBar();
 
@@ -40,17 +40,15 @@ if (!weatherDayBtn || !weatherFiveDaysBtn || !listOtherCards) {
 }
 
 function switchWeatherGroup(event) {
+    weatherDayBtn.classList.toggle('weather-group__link--underline');
+    weatherFiveDaysBtn.classList.toggle('weather-group__link--underline');
+    listOtherCards.innerHTML = "";
+
     // Render five days
     if (event.currentTarget.id === 'weather-five-day') {
-        weatherDayBtn.classList.remove('weather-group__link--underline');
-        weatherFiveDaysBtn.classList.add('weather-group__link--underline');
-        listOtherCards.innerHTML = "";
         listOtherCards.append(shortCardDetail.createDayCard());
     } else {
         // Render detail hours
-        weatherDayBtn.classList.add('weather-group__link--underline');
-        weatherFiveDaysBtn.classList.remove('weather-group__link--underline');
-        listOtherCards.innerHTML = "";
         listOtherCards.append(shortCardDetail.createHourDetailCard());
     }
 }
