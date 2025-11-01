@@ -1,6 +1,10 @@
 # WeatherApp
 
-AlexCAP [Telegram](https://t.me/JS_Alexey)
-Alexey
+**nik:** AlexCAP
+**name:** Alexey
 
-# Запуск проекта через Live Server
+**Social links:** [Telegram](https://t.me/JS_Alexey)
+
+Tech stack: HTML, CSS, JS
+
+#### To start the app, run it over Live Server

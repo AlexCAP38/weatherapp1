@@ -1,13 +1,13 @@
 .card {
+    --transparent-radius-thumb: 60px;
+    display: flex;
+    flex-direction: column;
     width: 158px;
     height: 196px;
     border-radius: var(--default-border-radius);
     background-color: var(--background-neutral-100);
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: var(--text-neutral-900);
+    padding: var(--padding-small);
+    gap: var(--gap-in-block-small);
 
     .card__values-container {
         display: flex;
@@ -17,8 +17,9 @@
         height: 116px;
 
         .card__title {
-            font-size: 16px;
-            line-height: 20px;
+            font-size: var(--font-size-text-medium);
+            margin-bottom: -4px;
+            color: var(--text-neutral-900);
             font-weight: 700;
             text-align: center;
         }
@@ -26,6 +27,7 @@
         .card__value {
             font-size: 32px;
             line-height: 32px;
+            color: var(--text-neutral-900);
         }
     }
 
@@ -37,11 +39,13 @@
         .card__bar {
             --hole-x: 50%;
             --background-tack: var(--background-neutral-200-alpha-04);
-            --gradient: radial-gradient(50% 9453.13% at 50% 50%,
-                    rgba(84, 84, 84, 0.4) 0%,
-                    rgba(138, 138, 138, 0.4) 45.12%,
-                    #DADADA 100%,
-                    rgba(218, 218, 218, 0.4) 100%);
+            --gradient: radial-gradient(
+                50% 9453.13% at 50% 50%,
+                rgba(84, 84, 84, 0.4) 0%,
+                rgba(138, 138, 138, 0.4) 45.12%,
+                #dadada 100%,
+                rgba(218, 218, 218, 0.4) 100%
+            );
             position: relative;
             width: 100%;
             height: 8px;
@@ -54,13 +58,13 @@
             background: var(--background-tack);
             border-radius: var(--default-border-radius);
 
-            -webkit-mask-image: radial-gradient(circle 60px at var(--hole-x) 50%, transparent 12%, black 12%);
+            -webkit-mask-image: radial-gradient(circle var(--transparent-radius-thumb) at var(--hole-x) 50%, transparent 12%, black 12%);
             -webkit-mask-repeat: no-repeat;
 
-            -moz-mask-image: radial-gradient(circle 60px at var(--hole-x) 50%, transparent 12%, black 12%);
+            -moz-mask-image: radial-gradient(circle var(--transparent-radius-thumb) at var(--hole-x) 50%, transparent 12%, black 12%);
             -moz-mask-repeat: no-repeat;
 
-            mask-image: radial-gradient(circle 60px at var(--hole-x) 50%, transparent 12%, black 12%);
+            mask-image: radial-gradient(circle var(--transparent-radius-thumb) at var(--hole-x) 50%, transparent 12%, black 12%);
             mask-repeat: no-repeat;
             z-index: 2;
         }
@@ -70,7 +74,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background-color: #DADADA;
+            background-color: #dadada;
             left: var(--hole-x);
             top: 50%;
             transform: translate(-50%, -50%);
@@ -81,8 +85,8 @@
             justify-content: space-between;
 
             .card__range-description {
-                font-size: 12px;
-                line-height: 16px;
+                font-size: var(--font-size-text-small);
+                line-height: var(--line-height-text-small);
                 color: var(--text-neutral-800);
             }
         }
@@ -90,5 +94,66 @@
 
     .card__bar-container .card__bar-container--center {
         justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .card {
+        width: 163px;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+    .card {
+        height: 48px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        width: clamp(98px, 20vw, 128px);
+        height: 148px;
+        padding: var(--padding-xsmall);
+        gap: 12px;
+
+        .card__values-container {
+            height: 86px;
+
+            .card__title {
+                font-size: var(--font-size-text-small);
+                line-height: var(--line-height-text-small);
+            }
+
+            .card__icon {
+                width: 24px;
+            }
+
+            .card__value {
+                font-size: 22px;
+                line-height: 22px;
+            }
+        }
+
+        .card__bar-container {
+            gap: var(--gap-in-element-medium);
+
+            .card__bar {
+                height: 6px;
+                --transparent-radius-thumb: 50px;
+
+                .card__thumb {
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+
+            .card__range-container {
+                .card__range-description {
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+            }
+        }
     }
 }

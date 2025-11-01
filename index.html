@@ -1,109 +1,102 @@
 <!DOCTYPE html>
 <html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="icon" href="./images/weatherIcons/fewCloudsDay.svg" type="image/svg" />
+        <title>Weather App</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="icon" href="./images/weatherIcons/fewCloudsDay.svg" type="image/svg">
-    <title>Weather App</title>
-</head>
-
-<body>
-    <div class="main-wrapper">
-        <h1 class="visually-hidden">Приложение Weather App для отображение погоды</h1>
-        <header class="header">
-            <a href="#" class="logo">
-                <img src="./images/logo.svg" alt="Логотип приложения" width="192" height="48">
-            </a>
-            <form action="" method="post" class="search-bar" id="search-form">
-                <input type="text" class="search-bar__input" id="search-bar" placeholder="Поиск по городу">
-                <button type="reset" class="search-bar__btn" id="search-bar-btn" disabled></button>
-            </form>
-        </header>
-        <main class="content-wrapper">
-            <article class="weather-current">
-                <div class="weather-current__container">
-                    <h2 class="weather-current__title-city">Москва</h2>
-                    <time class="weather-current__temperature-date" datetime="01-06">Суббота, 06 января</time>
-                    <time class="weather-current__temperature-time" datetime="11:29">11:29</time>
-                </div>
-                <span class="weather-current__temperature">-7°</span>
-                <div class="weather-current__state">
-                    <div class="weather-current__content">
-                        <img src="./images/weatherStateIcons/brokenCloudsDay.svg" alt="" width="24"
-                            height="24">
-                        <span>Облачно</span>
+    <body>
+        <div class="main-wrapper">
+            <h1 class="visually-hidden">Приложение Weather App для отображение погоды</h1>
+            <header class="header">
+                <a href="#" class="logo">
+                    <picture>
+                        <source srcset="./images/logoSmall.svg" media="(max-width: 1023px)" />
+                        <img src="./images/logo.svg" alt="Логотип приложения" width="192" height="48" />
+                    </picture>
+                </a>
+                <form action="" method="post" class="search-bar" id="search-form">
+                    <input type="text" class="search-bar__input" id="search-bar" placeholder="Поиск по городу" />
+                    <button type="reset" class="search-bar__btn" id="search-bar-btn" disabled></button>
+                </form>
+            </header>
+            <main class="content-wrapper">
+                <article class="weather-current">
+                    <div class="weather-current__information">
+                        <h2 class="weather-current__title-city">Кременчуг-константиновское</h2>
+                        <time class="weather-current__temperature-date" datetime="01-06">Суббота, 06 января</time>
+                        <time class="weather-current__temperature-time" datetime="11:29">11:29</time>
                     </div>
-                    <span class="weather-current__fill">Ощущается как -11°</span>
+                    <span class="weather-current__temperature">-7°</span>
+                    <div class="weather-current__state">
+                        <div class="weather-current__content">
+                            <img src="./images/weatherStateIcons/brokenCloudsDay.svg" alt="" width="24" height="24" />
+                            <span class="weather-current__icon-description">Облачно с прояснениями</span>
+                        </div>
+                        <span class="weather-current__fill">Ощущается как -11°</span>
+                    </div>
+                </article>
+                <ul class="weather-indications" id="weather-indications"></ul>
+            </main>
+            <section class="weather-group">
+                <div class="weather-group__header">
+                    <h2 class="weather-group__title">Прогноз:</h2>
+                    <nav>
+                        <ul class="weather-group__options">
+                            <li>
+                                <button class="weather-group__link weather-group__link--underline" type="button" id="weather-day">на 24 часа</button>
+                            </li>
+                            <li>
+                                <button class="weather-group__link" type="button" id="weather-five-day">на 5 дней</button>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </article>
-            <ul class="weather-indications" id="weather-indications"></ul>
-        </main>
-        <section class="weather-group">
-            <div class="weather-group__header">
-                <h2 class="weather-group__title">Прогноз:</h2>
-                <nav>
-                    <ul class="weather-group__options">
-                        <li>
-                            <button class="weather-group__link weather-group__link--underline" type="button"
-                                id="weather-day">на 24
-                                часа</button>
-                        </li>
-                        <li>
-                            <button class="weather-group__link" type="button" id="weather-five-day">на 5 дней</button>
-                        </li>
-                    </ul>
+                <nav class="weather-group__details">
+                    <button type="button" class="weather-group__btn weather-group__btn--disable" id="weather-group-prev-day">
+                        <img src="./images/chevronIcon.svg" alt="Иконка переключения детализации погоды" width="24" height="24" />
+                    </button>
+                    <ul class="weather-group__list" id="weather-group__list"></ul>
+                    <button type="button" class="weather-group__btn weather-group__btn--rotate" id="weather-group-next-day">
+                        <img src="./images/chevronIcon.svg" alt="Иконка переключения детализации погоды" width="24" height="24" />
+                    </button>
                 </nav>
-            </div>
-            <div class="weather-group__details">
-                <button type="button" class="weather-group__btn weather-group__btn--disable"
-                    id="weather-group-prev-day">
-                    <img src="./images/chevronIcon.svg" alt="Иконка переключения детализации погоды" width="24"
-                        height="24">
-                </button>
-                <nav class="weather-group__content">
-                    <ul id="weather-group__list"></ul>
+            </section>
+            <footer class="footer">
+                <nav class="footer__link">
+                    Проект выполнен в рамках стажировки&nbsp;
+                    <a href="https://preax.ru" target="_blank" rel="noopener noreferrer">PREAX</a>
                 </nav>
-                <button type="button" class="weather-group__btn weather-group__btn--rotate" id="weather-group-next-day">
-                    <img src="./images/chevronIcon.svg" alt="Иконка переключения детализации погоды" width="24"
-                        height="24">
-                </button>
-            </div>
-        </section>
-        <footer class="footer">
-            <div class="footer__link">
-                Проект выполнен в рамках стажировки&nbsp;
-                <a href="https://preax.ru" target="_blank" rel="noopener noreferrer">PREAX</a>
-            </div>
-        </footer>
-    </div>
-    <template id="weather-group-template">
-        <li id="detail-card" class="weather-group__card">
-            <time id="time" datetime=""></time>
-            <img id="image" src="" alt="иконка отображения погоды" width="32" height="32">
-            <span id="temperature"></span>
-        </li>
-    </template>
-    <template id="widget-card-template">
-        <li class="card">
-            <div class="card__values-container">
-                <h3 class="card__title"></h3>
-                <img class="card__icon" src="" alt="Иконка состояния погоды" width="32" height="32">
-                <span class="card__value"></span>
-            </div>
-            <div class="card__bar-container">
-                <div class="card__bar">
-                    <div class="card__thumb"></div>
+            </footer>
+        </div>
+        <template id="weather-group-template">
+            <li id="detail-card" class="weather-group__card">
+                <time id="time" datetime=""></time>
+                <img id="image" src="" alt="иконка отображения погоды" width="32" height="32" />
+                <span id="temperature"></span>
+            </li>
+        </template>
+        <template id="widget-card-template">
+            <li class="card">
+                <div class="card__values-container">
+                    <h3 class="card__title"></h3>
+                    <img class="card__icon" src="" alt="Иконка состояния погоды" width="32" height="32" />
+                    <span class="card__value"></span>
                 </div>
-                <div class="card__range-container">
-                    <span class="card__range-description"></span>
-                    <span class="card__range-description"></span>
+                <div class="card__bar-container">
+                    <div class="card__bar">
+                        <div class="card__thumb"></div>
+                    </div>
+                    <div class="card__range-container">
+                        <span class="card__range-description"></span>
+                        <span class="card__range-description"></span>
+                    </div>
                 </div>
-            </div>
-        </li>
-    </template>
-    <script src="./js/main.js" type="module"></script>
-</body>
-
+            </li>
+        </template>
+        <script src="./js/main.js" type="module"></script>
+    </body>
 </html>

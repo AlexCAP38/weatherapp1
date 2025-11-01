@@ -1,10 +1,38 @@
 :root {
+    --max-width-content: 1120px;
+
     --default-border-radius: 8px;
+
+    --margin-large: 32px;
+    --margin-medium: 24px;
+    --margin-small: 16px;
+
+    --padding-large: 32px;
+    --padding-medium: 24px;
+    --padding-small: 16px;
+    --padding-xsmall: 12px;
+
+    --gap-in-block-large: 32px;
+    --gap-in-block-medium: 24px;
+    --gap-in-block-small: 16px;
+
+    --gap-in-element-xlarge: 12px;
+    --gap-in-element-large: 8px;
+    --gap-in-element-medium: 6px;
+    --gap-in-element-small: 4px;
+
+    --font-size-text-medium: 16px;
+    --line-height-text-medium: 20px;
+
+    --font-size-text-small: 12px;
+    --line-height-text-small: 16px;
+
     --background-neutral-100: rgba(245, 244, 244, 0.4);
     --background-neutral-100-alpha-1: rgba(245, 244, 244, 1);
     --background-neutral-200: rgba(218, 218, 218, 1);
     --background-neutral-200-alpha-04: rgba(218, 218, 218, 0.4);
     --background-range-thumb: rgba(139, 139, 139, 0.1);
+
     --text-neutral-100: rgba(245, 244, 244, 1);
     --text-neutral-400: rgba(166, 166, 166, 1);
     --text-neutral-600: rgba(112, 112, 112, 1);
