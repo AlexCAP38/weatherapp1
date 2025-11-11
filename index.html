@@ -2,10 +2,11 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles/main.css" />
-        <link rel="icon" href="./images/weatherStateIcons/fewCloudsDay.svg" type="image/svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./assets/fewCloudsDay-CbXtuzUy.svg" type="image/svg" />
         <title>Weather App</title>
+      <script type="module" crossorigin src="./assets/index-DZfBqXpm.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-DLD1Q2DJ.css">
     </head>
 
     <body>
@@ -14,8 +15,8 @@
             <header class="header">
                 <a href="#" class="logo">
                     <picture>
-                        <source srcset="./images/logoSmall.svg" media="(max-width: 1023px)" />
-                        <img src="./images/logo.svg" alt="Логотип приложения" width="192" height="48" />
+                        <source srcset="data:image/svg+xml,%3csvg%20width='54'%20height='48'%20viewBox='0%200%2054%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M40.384%2010.64H44.864L53.216%2033.36H48.672L46.56%2027.696H38.624L36.544%2033.36H32L40.384%2010.64ZM45.76%2024.592L42.624%2015.216L39.36%2024.592H45.76Z'%20fill='%23202020'/%3e%3cpath%20d='M10.144%2010.704H14.24L16.832%2018.224L19.456%2010.704H23.52L19.616%2021.04L22.496%2028.272L28.928%2010.64H33.728L24.64%2033.36H20.832L16.832%2023.824L12.864%2033.36H9.056L0%2010.64H4.736L11.2%2028.272L14.016%2021.04L10.144%2010.704Z'%20fill='%23F5F4F4'/%3e%3c/svg%3e" media="(max-width: 1023px)" />
+                        <img src="./assets/logo-D3SK8gOQ.svg" alt="Логотип приложения" width="192" height="48" />
                     </picture>
                 </a>
                 <form action="" method="post" class="search-bar" id="search-form">
@@ -33,7 +34,7 @@
                     <span class="weather-current__temperature">-7°</span>
                     <div class="weather-current__state">
                         <div class="weather-current__content">
-                            <img src="./images/weatherStateIcons/brokenCloudsDay.svg" alt="" width="24" height="24" />
+                            <img src="./assets/brokenCloudsDay-CbkynoBa.svg" alt="" width="24" height="24" />
                             <span class="weather-current__icon-description">Облачно с прояснениями</span>
                         </div>
                         <span class="weather-current__fill">Ощущается как -11°</span>
@@ -57,11 +58,11 @@
                 </div>
                 <nav class="weather-group__details">
                     <button type="button" class="weather-group__btn weather-group__btn--disable" id="weather-group-prev-day" disabled>
-                        <img src="./images/chevronIcon.svg" alt="Кнопка для просмотра более ранних прогнозов погоды" width="24" height="24" />
+                        <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16%203L7%2012L16%2021'%20stroke='%23545454'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Кнопка для просмотра более ранних прогнозов погоды" width="24" height="24" />
                     </button>
                     <ul class="weather-group__list" id="weather-group__list"></ul>
                     <button type="button" class="weather-group__btn weather-group__btn--rotate" id="weather-group-next-day">
-                        <img src="./images/chevronIcon.svg" alt="Кнопка для просмотра следующих прогнозов погоды" width="24" height="24" />
+                        <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16%203L7%2012L16%2021'%20stroke='%23545454'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Кнопка для просмотра следующих прогнозов погоды" width="24" height="24" />
                     </button>
                 </nav>
             </section>
@@ -96,7 +97,6 @@
                     </div>
                 </div>
             </li>
-        </template>
-        <script src="./js/main.js" type="module"></script>
+        </template>
     </body>
 </html>
