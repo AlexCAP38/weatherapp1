@@ -4,19 +4,51 @@
     flex-direction: column;
     gap: var(--gap-in-block-large);
 
+    @media (max-width: 1023px) {
+        padding: var(--padding-medium);
+        gap: var(--gap-in-block-medium);
+    }
+
+    @media (max-width: 767px) {
+        padding: var(--padding-small);
+        gap: var(--gap-in-block-small);
+    }
+
     .weather-group__header {
         display: flex;
         align-items: baseline;
         gap: var(--gap-in-block-large);
 
+        @media (max-width: 1023px) {
+            gap: var(--gap-in-block-medium);
+        }
+
+        @media (max-width: 767px) {
+            gap: var(--gap-in-block-small);
+        }
+
         .weather-group__title {
             line-height: 32px;
             color: var(--text-neutral-100);
+
+            @media (max-width: 767px) {
+                font-size: var(--font-size-text-medium);
+                line-height: var(--line-height-text-medium);
+            }
         }
 
         .weather-group__options {
             display: flex;
             gap: var(--gap-in-block-large);
+
+            @media (max-width: 1023px) {
+                gap: var(--gap-in-block-medium);
+            }
+
+            @media (max-width: 767px) {
+                height: 22px;
+                gap: var(--gap-in-block-small);
+            }
 
             .weather-group__link {
                 line-height: 20px;
@@ -25,6 +57,11 @@
                 color: var(--text-neutral-400);
                 font-weight: 700;
                 cursor: pointer;
+
+                @media (max-width: 767px) {
+                    font-size: var(--font-size-text-small);
+                    line-height: var(--line-height-text-small);
+                }
             }
 
             .weather-group__link:hover {
@@ -38,6 +75,10 @@
                 text-decoration-line: underline;
                 text-decoration-thickness: 2px;
                 text-underline-offset: 7px;
+
+                @media (max-width: 767px) {
+                    text-underline-offset: 4px;
+                }
             }
         }
     }
@@ -47,6 +88,14 @@
         align-items: center;
         justify-content: space-between;
         gap: var(--gap-in-block-large);
+
+        @media (max-width: 1023px) {
+            gap: var(--gap-in-block-medium);
+        }
+
+        @media (max-width: 767px) {
+            gap: var(--gap-in-block-small);
+        }
 
         .weather-group__btn {
             display: flex;
@@ -58,8 +107,20 @@
             border: 0;
             border-radius: var(--default-border-radius);
             background-color: var(--background-neutral-100);
-
             cursor: pointer;
+
+            @media (max-width: 767px) {
+                min-width: 40px;
+                height: 32px;
+
+                img {
+                    width: 16px;
+                }
+            }
+
+            @media (max-width: 639px) {
+                max-width: 40px;
+            }
         }
 
         .weather-group__btn:hover {
@@ -85,6 +146,14 @@
             mask-image: linear-gradient(90deg, black 95%, transparent 100%);
             mask-repeat: no-repeat;
 
+            @media (max-width: 1023px) {
+                gap: var(--gap-in-element-xlarge);
+            }
+
+            @media (max-width: 767px) {
+                gap: var(--gap-in-element-large);
+            }
+
             .weather-group__card {
                 border: 0;
                 border-radius: var(--default-border-radius);
@@ -97,42 +166,10 @@
                 letter-spacing: 0.08px;
                 gap: var(--gap-in-block-small);
                 text-wrap: nowrap;
-            }
-        }
-    }
-}
 
-@media screen and (max-width: 1023px) {
-    .weather-group {
-        padding: var(--padding-medium);
-        gap: var(--gap-in-block-medium);
-
-        .weather-group__header {
-            gap: var(--gap-in-block-medium);
-
-            .weather-group__options {
-                gap: var(--gap-in-block-medium);
-            }
-        }
-
-        .weather-group__details {
-            gap: var(--gap-in-block-medium);
-
-            .weather-group__list {
-                gap: var(--gap-in-element-xlarge);
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 885px) {
-    .weather-group {
-        .weather-group__details {
-            .weather-group__list {
-                .weather-group__card {
+                @media (min-width: 768px) and (max-width: 885px) {
                     flex-direction: column;
                     padding: var(--padding-small);
-
                     font-size: var(--font-size-text-medium);
                     line-height: var(--line-height-text-medium);
                     gap: var(--gap-in-block-small);
@@ -142,55 +179,8 @@
                         height: 32px;
                     }
                 }
-            }
-        }
-    }
-}
 
-@media screen and (max-width: 767px) {
-    .weather-group {
-        padding: var(--padding-small);
-        gap: var(--gap-in-block-small);
-
-        .weather-group__header {
-            gap: var(--gap-in-block-small);
-
-            .weather-group__title {
-                font-size: var(--font-size-text-medium);
-                line-height: var(--line-height-text-medium);
-            }
-
-            .weather-group__options {
-                height: 22px;
-                gap: var(--gap-in-block-small);
-
-                .weather-group__link {
-                    font-size: var(--font-size-text-small);
-                    line-height: var(--line-height-text-small);
-                }
-
-                .weather-group__link--underline {
-                    text-underline-offset: 4px;
-                }
-            }
-        }
-
-        .weather-group__details {
-            gap: var(--gap-in-block-small);
-
-            .weather-group__btn {
-                min-width: 40px;
-                height: 32px;
-
-                img {
-                    width: 16px;
-                }
-            }
-
-            .weather-group__list {
-                gap: var(--gap-in-element-large);
-
-                .weather-group__card {
+                @media (max-width: 767px) {
                     font-size: var(--font-size-text-small);
                     line-height: var(--line-height-text-small);
                     gap: var(--gap-in-element-xlarge);
@@ -202,20 +192,8 @@
                         height: 24px;
                     }
                 }
-            }
-        }
-    }
-}
 
-@media screen and (max-width: 639px) {
-    .weather-group {
-        .weather-group__details {
-            .weather-group__btn {
-                max-width: 40px;
-            }
-
-            .weather-group__list {
-                .weather-group__card {
+                @media (max-width: 639px) {
                     flex-direction: column;
                 }
             }

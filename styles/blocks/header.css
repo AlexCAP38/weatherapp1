@@ -4,26 +4,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .header {
+    @media (min-width: 768px) and (max-width: 1023px) {
         height: 96px;
         gap: 135px;
         padding: var(--padding-medium);
     }
-}
 
-@media screen and (max-width: 767px) {
-    .header {
+    @media (max-width: 767px) {
         height: 64px;
         gap: 135px;
         padding: var(--padding-small);
     }
-}
 
-@media screen and (max-width: 639px) {
-    .header {
+    @media (max-width: 639px) {
         gap: 16px;
     }
 }

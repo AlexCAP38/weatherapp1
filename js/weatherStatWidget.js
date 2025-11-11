@@ -35,7 +35,7 @@ export class WeatherStatWidget {
 
         const barometerBar = barometerCard.querySelector(".card__bar");
         barometerBar.style.setProperty("--hole-x", `${this.#setPosition(653, 814, this.#data.barometer)}%`);
-        barometerBar.style.setProperty("--background-tack", `var(--gradient)`);
+        barometerBar.style.setProperty("--background-track", `var(--gradient)`);
 
         barometerCard.querySelector(".card__range-container").classList.add("card__bar-container--center");
         barometerCard.querySelector(".card__range-description").textContent = this.#data.barometerDescription;
